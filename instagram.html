@@ -16,7 +16,7 @@
     }
 
     .notification {
-      display: none;
+      display: flex;
       align-items: center;
       background: #fff;
       border: 1px solid #dbdbdb;
@@ -25,6 +25,8 @@
       padding: 10px 16px;
       width: 350px;
       max-width: 90%;
+      opacity: 0;
+      transform: translateY(20px);
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
@@ -88,12 +90,9 @@
 
   <script>
     window.onload = function () {
-      setTimeout(() => {
-        const notification = document.getElementById('notification');
-        notification.style.display = 'flex';
-        notification.style.opacity = 1;
-        notification.style.transform = 'translateY(0)';
-      }, 2000); // Show after 2 seconds
+      const notification = document.getElementById('notification');
+      notification.style.opacity = 1;
+      notification.style.transform = 'translateY(0)';
     };
   </script>
 </body>
